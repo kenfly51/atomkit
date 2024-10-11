@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Use ESNext for modern features
+    "module": "ESNext", // Set module to ESNext
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@core/types/*": ["src/types/*"] // Create the alias
+    },
+    "baseUrl": "."
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
