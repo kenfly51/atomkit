@@ -9,7 +9,7 @@ export class MiniAppFactory {
   static createMiniApp<T extends MiniApp>(tagName: string, cssContent: string, eventBus: IEventBus): T | undefined {
     const miniAppClass = customElements.get(tagName);
     if (miniAppClass) {
-      return new (miniAppClass as new (cssContent: string, eventBus: IEventBus) => T)(cssContent, eventBus);
+      return new (miniAppClass as new (tagName: string, cssContent: string, eventBus: IEventBus) => T)(tagName, cssContent, eventBus);
     }
   }
 }

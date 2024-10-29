@@ -1,17 +1,18 @@
 {
   "name": "@kenfly51/atomkit",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "A simple JavaScript library for building mini-apps",
   "main": "dist/atomkit.cjs.js",
   "module": "dist/atomkit.esm.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "pub": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kenfly51/atomkit.git"
+    "url": "git+https://github.com/kenfly51/atomkit.git"
   },
   "keywords": [],
   "author": "Max Nguyen",

@@ -14,6 +14,7 @@ export class Shell implements IShell {
     return new Promise(async (resolve, reject) => {
       let cssContent: string;
       const script = document.createElement('script');
+      script.id = tagName;
       script.src = scriptUrl;
 
       if (cssUrl) {
@@ -39,6 +40,13 @@ export class Shell implements IShell {
 
       document.head.appendChild(script);
     })
+  }
+
+  async unloadMiniApp(tagName: string) {
+    const script = document.querySelector(`script#${tagName}`);
+    if (script) {
+      script.remove();
+    }
   }
 
   communicateBetweenMiniApps(event: string, data: any): void {

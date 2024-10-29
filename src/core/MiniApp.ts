@@ -6,9 +6,11 @@ import { EventType } from 'src/contants/EventType';
 export abstract class MiniApp extends HTMLElement implements IMiniApp {
   protected eventBus: IEventBus;
   private cssContent: string;
+  private name: string;
 
-  constructor(cssContent: string, eventBus: IEventBus) {
+  constructor(name: string, cssContent: string, eventBus: IEventBus) {
     super();
+    this.name = name;
     this.eventBus = eventBus;
     this.cssContent = cssContent;
     // Attach shadow DOM in 'open' mode so that styles and structure are isolated
