@@ -1,6 +1,6 @@
 {
   "name": "@kenfly51/atomkit",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A simple JavaScript library for building mini-apps",
   "main": "dist/atomkit.cjs.js",
   "module": "dist/atomkit.esm.js",

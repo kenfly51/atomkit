@@ -30,6 +30,7 @@ export abstract class MiniApp extends HTMLElement implements IMiniApp {
   private createAndAttachDOM(): void {
     if (this.shadowRoot) {
       const mountPoint = document.createElement('div');
+      mountPoint.style.height = "100%";
       this.shadowRoot.appendChild(mountPoint);
       this.render(mountPoint); // Call the abstract render method with the mount point
     }
