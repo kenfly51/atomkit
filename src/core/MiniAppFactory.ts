@@ -2,7 +2,7 @@ import { MiniApp } from './MiniApp';
 import { IEventBus } from '@core/types/IEventBus';
 
 export class MiniAppFactory {
-  static register<T extends MiniApp>(tagName: string, miniAppClass: new (eventBus: IEventBus) => T): void {
+  static register<T extends MiniApp>(tagName: string, miniAppClass: new (name: string, cssContent: string, eventBus: IEventBus) => T): void {
     customElements.define(tagName, miniAppClass);
   }
 
